@@ -28,7 +28,7 @@ async def lifespan(app: FastAPI):
 
 
 def create_app() -> FastAPI:
-    app = FastAPI(title='mem-vec', lifespan=lifespan)
+    app = FastAPI(title='memvec', lifespan=lifespan)
     app.include_router(v1_router)
     return app
 

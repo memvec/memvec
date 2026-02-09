@@ -8,7 +8,7 @@ class Settings(BaseSettings):
 
     model_config = SettingsConfigDict(env_file='.env', extra='ignore')
 
-    app_name: str = 'mem-vec'
+    app_name: str = 'memvec'
     app_env: str = 'dev'
 
     db_host: str = '127.0.0.1'

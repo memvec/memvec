@@ -1,4 +1,4 @@
-# mem-vec
+# memvec
 
 Lightweight memory storage & retrieval service (FastAPI + MySQL + Qdrant + NebulaGraph).
 
