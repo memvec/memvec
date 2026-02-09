@@ -3,7 +3,7 @@
 Lightweight memory storage & retrieval service (FastAPI + MySQL + Qdrant + NebulaGraph).
 
 ## Summary
-mem-vec ingests events, qualifies them (optionally via an LLM), persists structured memories, indexes them into a vector DB (Qdrant) and upserts metadata into a knowledge graph (NebulaGraph). It is designed to be resilient when optional integrations (LLM, Qdrant, KG) are unavailable.
+memvec ingests events, qualifies them (optionally via an LLM), persists structured memories, indexes them into a vector DB (Qdrant) and upserts metadata into a knowledge graph (NebulaGraph). It is designed to be resilient when optional integrations (LLM, Qdrant, KG) are unavailable.
 
 ## Quickstart
 
