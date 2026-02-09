@@ -1,5 +1,5 @@
 CREATE SPACE IF NOT EXISTS memkg(vid_type=FIXED_STRING(256));
-
+:sleep 10
 USE memkg;
 
 CREATE TAG IF NOT EXISTS Actor(actor_type string, actor_id string);

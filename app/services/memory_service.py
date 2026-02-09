@@ -28,6 +28,7 @@ class MemoryService:
         self.llm = OllamaClient()
         self.vector_db_svc = VectorDBService()
         self.vector_upsert_item = VectorDBUpsertItem()
+        self.kg = KGService()
 
         logger.debug('Ollama client to qualify memories from incoming event')
 
@@ -268,5 +269,13 @@ class MemoryService:
                 )
                 # for now not sur if i should stop the flow here or be ok with memory not being in VDB. 
                 # TODO: revisit later
-                pass
+
+            try:
+                self.kg.upsert_memory(mem,event)
+                logger.debug('Upserted graph after vector DB')
+            except Exception:
+                logger.exception(
+                    'KG upsert failed',
+                    extra={'memory_id': getattr(mem, 'id', None)},
+                )
         return memories
