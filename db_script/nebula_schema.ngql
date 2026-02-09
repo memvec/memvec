@@ -1,0 +1,10 @@
+CREATE SPACE IF NOT EXISTS memkg(vid_type=FIXED_STRING(256));
+
+USE memkg;
+
+CREATE TAG IF NOT EXISTS Actor(actor_type string, actor_id string);
+CREATE TAG IF NOT EXISTS Memory(memory_id int, type string, scope string, key string, confidence double);
+CREATE TAG IF NOT EXISTS Entity(name string, entity_type string);
+
+CREATE EDGE IF NOT EXISTS HAS_MEMORY();
+CREATE EDGE IF NOT EXISTS ABOUT();
