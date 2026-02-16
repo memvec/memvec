@@ -1,6 +1,6 @@
 # memvec
 
-Lightweight memory storage & retrieval service (FastAPI + MySQL + Qdrant + NebulaGraph).
+Project aiming to bould a lightweight memory storage & retrieval service (FastAPI + MySQL + Qdrant + NebulaGraph). This can be used for agentic or non-agentic AI applications. 
 
 ## Summary
 memvec ingests events, qualifies them (optionally via an LLM), persists structured memories, indexes them into a vector DB (Qdrant) and upserts metadata into a knowledge graph (NebulaGraph). It is designed to be resilient when optional integrations (LLM, Qdrant, KG) are unavailable.

@@ -9,9 +9,6 @@ logger = logging.getLogger(__name__)
 
 
 class EventService:
-    """
-    Keeping event persistence here so routes stay thin.
-    """
 
     def create_event(self, db: Session, data: EventCreate) -> Event:
         logger.debug(

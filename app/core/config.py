@@ -40,7 +40,6 @@ class Settings(BaseSettings):
     nebula_space: str = 'memkg'
     nebula_vid_len: int = 256
 
-
     @property
     def database_url(self) -> str:
         return (

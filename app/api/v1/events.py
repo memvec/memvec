@@ -18,6 +18,9 @@ router = APIRouter(prefix='/v1/events', tags=['events'])
 event_svc = EventService()
 memory_svc = MemoryService()
 
+USER_ACTOR = os.getenv('USER_ACTOR', 'user').strip()
+SYS_ACTOR = os.getenv('SYSTEM_ACTOR', 'system').strip()
+
 
 @router.post('', response_model=EventOut)
 def create_event(payload: EventCreate, db: Session = Depends(get_db)) -> EventOut:
